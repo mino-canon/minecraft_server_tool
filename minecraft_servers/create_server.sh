@@ -15,11 +15,11 @@ cd $regist_server
 template_dir="../.template/"
 . $template_dir"bedrock_server_url.txt"
 wget $bedrock_server_url
-7z x $(basename $bedrock_server_url)
+7za x $(basename $bedrock_server_url)
 
 # 設定ファイルを複製する
 conf_files=$template_dir"*"
-cp $conf_files ./ --force
+cp $conf_files ./ --force -a
 
 # サーバ名を変更
 properties_file="server.properties"
